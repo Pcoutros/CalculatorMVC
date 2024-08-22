@@ -1,3 +1,4 @@
+import java.awt.FlowLayout;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
 
@@ -13,7 +14,7 @@ public class CalculatorView {
 	private JTextField display;
 	private JButton zero, one, two, three, four, five, six, seven,
 					eight, nine, plus, minus, divide, multiply, equals,
-					clear, decimal;
+					clear, decimal, plusMinus, percent;
 	private JButton[] buttons;
 	
 	public CalculatorView() {
@@ -21,7 +22,7 @@ public class CalculatorView {
 		frame = new JFrame("Calculator MVC");
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		contentPanel = new JPanel();
-		display = new JTextField();
+		display = new JTextField(20);
 		
 		zero = new JButton("0");
 		one = new JButton("1");
@@ -40,10 +41,15 @@ public class CalculatorView {
 		equals = new JButton("=");
 		clear = new JButton("C");
 		decimal = new JButton(".");
+		plusMinus = new JButton(")");
+		percent = new JButton("%");
 		
-		buttons = new JButton[] {zero, one, two, three, four, five, six, seven,
-				eight, nine, plus, minus, divide, multiply, equals,
-				clear, decimal};
+		buttons = new JButton[] {
+				clear, plusMinus, percent, multiply,
+				seven, eight, nine, divide,
+				four, five, six, minus,
+				one, two, three, plus,
+				zero, decimal, equals};
 		
 		addComponents();
 		createAndShow();
@@ -51,33 +57,43 @@ public class CalculatorView {
 	
 	private void addComponents() {
 		
-		frame.setLayout(new GridBagLayout());
+		contentPanel.setLayout(new GridBagLayout());
 		frame.setContentPane(contentPanel);
 		GridBagConstraints gbc = new GridBagConstraints();
+    	gbc.fill = GridBagConstraints.HORIZONTAL;
+		
 		
         //gbc.fill = GridBagConstraints.HORIZONTAL;
         gbc.gridx = 0;
         gbc.gridy = 0;
         gbc.gridwidth = 4;
         gbc.ipady = 20;
+        gbc.weightx = 0.5;
         contentPanel.add(display, gbc);
         
         int x = 0;
-        int y = 0;
+        int y = 1;
         
         for (int i = 0; i < buttons.length; i++) {
         	gbc.fill = GridBagConstraints.HORIZONTAL;
+        	gbc.weightx = 0.5;
             gbc.gridx = x;
             gbc.gridy = y;
+            gbc.gridwidth = 1;
+            if (buttons[i] == zero) {
+            	gbc.gridwidth = 2;
+            	x += 1;
+            }
             
             JButton button = buttons[i];
             contentPanel.add(button, gbc);
             
             x++;
-            if (x % 4 == 0) {
-                x = 0;
+            if  (x == 4) {
+            	x = 0;
                 y++;
             }
+            System.out.println(y);
         }
 	}
 	
@@ -89,8 +105,12 @@ public class CalculatorView {
 
 	public static void main(String[] args) {
 		
-		CalculatorView cv = new CalculatorView();
+        javax.swing.SwingUtilities.invokeLater(new Runnable() {
+            public void run() {
 		
+		        CalculatorView cv = new CalculatorView();
+            }
+        });
 	}
 
 }
