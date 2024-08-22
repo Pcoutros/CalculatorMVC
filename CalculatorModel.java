@@ -7,13 +7,14 @@ public class CalculatorModel {
 	
 	public CalculatorModel(double input1, double input2, Operator oper) {
 		
-		input1 = this.input1;
-		input2 = this.input2;
-		oper = this.oper;
+		this.input1 = input1;
+		this.input2 = input2;
+		this.oper = oper;
 		
+		calculateResult();
 	}
 	
-	public void calculateResult(double input1, double input2, Operator oper) {
+	public void calculateResult() {
 		
 		switch (oper) {
 		case DIVIDE:
