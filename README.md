@@ -14,4 +14,6 @@ GUI Front end is up, need to finish the back end and the connection
 2) Subtraction
 3) Multiplication
 4) Division
+5) Positive/Negative
+6) Percent
 
