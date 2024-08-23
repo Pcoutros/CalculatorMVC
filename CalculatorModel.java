@@ -1,4 +1,6 @@
-
+/**
+* This class contains the data logic
+*/
 public class CalculatorModel {
 	
 	private double result;
