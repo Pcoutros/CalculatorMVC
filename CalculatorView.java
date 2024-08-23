@@ -1,3 +1,7 @@
+/**
+* This class sets up the framework for the GUI
+*/
+
 import java.awt.FlowLayout;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
