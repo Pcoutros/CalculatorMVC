@@ -1,5 +1,5 @@
 /**
-* This class sets up the framework for the GUI
+* This class sets up the framework for the GUI using Swing. It is a simple panel in a frame with a GridBag Layout to match mobile Calculator GUI's.
 */
 
 import java.awt.FlowLayout;
