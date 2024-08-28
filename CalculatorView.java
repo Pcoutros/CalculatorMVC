@@ -65,41 +65,41 @@ public class CalculatorView {
 		contentPanel.setLayout(new GridBagLayout());
 		frame.setContentPane(contentPanel);
 		GridBagConstraints gbc = new GridBagConstraints();
-    	gbc.fill = GridBagConstraints.HORIZONTAL;
-		
-		
-        //gbc.fill = GridBagConstraints.HORIZONTAL;
-        gbc.gridx = 0;
-        gbc.gridy = 0;
-        gbc.gridwidth = 4;
-        gbc.ipady = 20;
-        gbc.weightx = 0.5;
-        contentPanel.add(display, gbc);
-        
-        int x = 0;
-        int y = 1;
-        
-        for (int i = 0; i < buttons.length; i++) {
-        	gbc.fill = GridBagConstraints.HORIZONTAL;
-        	gbc.weightx = 0.5;
-            gbc.gridx = x;
-            gbc.gridy = y;
-            gbc.gridwidth = 1;
-            if (buttons[i] == zero) {
-            	gbc.gridwidth = 2;
-            	x += 1;
-            }
-            
-            JButton button = buttons[i];
-            contentPanel.add(button, gbc);
-            
-            x++;
-            if  (x == 4) {
-            	x = 0;
-                y++;
-            }
-            System.out.println(y);
-        }
+	    	gbc.fill = GridBagConstraints.HORIZONTAL;
+			
+			
+	        //gbc.fill = GridBagConstraints.HORIZONTAL;
+	        gbc.gridx = 0;
+	        gbc.gridy = 0;
+	        gbc.gridwidth = 4;
+	        gbc.ipady = 20;
+	        gbc.weightx = 0.5;
+	        contentPanel.add(display, gbc);
+	        
+	        int x = 0;
+	        int y = 1;
+	        
+	        for (int i = 0; i < buttons.length; i++) {
+	        	gbc.fill = GridBagConstraints.HORIZONTAL;
+	        	gbc.weightx = 0.5;
+	            	gbc.gridx = x;
+	            	gbc.gridy = y;
+	            	gbc.gridwidth = 1;
+	            	if (buttons[i] == zero) {
+	            		gbc.gridwidth = 2;
+	            		x += 1;
+	            	}
+	            
+	            	JButton button = buttons[i];
+	            	contentPanel.add(button, gbc);
+	            
+	            	x++;
+	            	if  (x == 4) {
+	            		x = 0;
+	                	y++;
+	            	}
+	            	System.out.println(y);
+	        }
 	}
 	
 	public void addFunctionality(ActionListener actionListener) {
@@ -125,11 +125,8 @@ public class CalculatorView {
 		
         javax.swing.SwingUtilities.invokeLater(new Runnable() {
             public void run() {
-		
 		        CalculatorView cv = new CalculatorView();
             }
         });
 	}
-
-	
 }
