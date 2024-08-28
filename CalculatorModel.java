@@ -1,4 +1,6 @@
-
+/**
+* This class contains the data logic for the various operators provided in this calculator project
+*/
 public class CalculatorModel {
 	
 	private double result;
