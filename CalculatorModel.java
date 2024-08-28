@@ -12,6 +12,7 @@ public class CalculatorModel {
 		this.input1 = input1;
 		this.input2 = input2;
 		this.oper = oper;
+		
 		calculateResult();
 	}
 	
