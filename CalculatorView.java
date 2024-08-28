@@ -1,11 +1,8 @@
-<<<<<<< HEAD
-=======
 /**
 * This class sets up the framework for the GUI using Swing. It is a simple panel in a frame with a GridBag Layout to match mobile Calculator GUI's.
 */
 
 import java.awt.FlowLayout;
->>>>>>> e4e7722d4b76b5e9bc99f412a39f1fd7791f5bd9
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
 import java.awt.event.ActionListener;
