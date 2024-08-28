@@ -1,6 +1,6 @@
-import java.awt.FlowLayout;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
+import java.awt.event.ActionListener;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -97,11 +97,24 @@ public class CalculatorView {
         }
 	}
 	
+	public void addFunctionality(ActionListener actionListener) {
+		for (JButton button : buttons) {
+			button.addActionListener(actionListener);
+		}
+	}
+	
 	private void createAndShow() {
 		frame.pack();
         frame.setVisible(true);
 	}
 	
+	public double getNumber() {
+		return Double.parseDouble(display.getText());
+	}
+	
+	public void clearText() {
+		display.setText(null);
+	}
 
 	public static void main(String[] args) {
 		
@@ -113,4 +126,5 @@ public class CalculatorView {
         });
 	}
 
+	
 }
