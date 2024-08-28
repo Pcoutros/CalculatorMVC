@@ -6,7 +6,7 @@ This is a work in progress to build a calculator off an MVC model using Java Swi
 
 ## Status
 
-GUI Front end is up, need to finish the back end and the connection
+GUI Front end is up, need to finish the back end and the connection... Started working on the controller portion
 
 ## Features
 
