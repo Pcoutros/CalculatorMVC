@@ -1,6 +1,4 @@
-/**
-* This class contains the data logic for the various operators provided in this calculator project
-*/
+
 public class CalculatorModel {
 	
 	private double result;
@@ -34,6 +32,8 @@ public class CalculatorModel {
 			break;
 		case PLUS:
 			result = input1 + input2;
+			break;
+		case NULL:
 			break;
 		default:
 			result = 0;
