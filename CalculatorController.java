@@ -25,7 +25,7 @@ public class CalculatorController {
 		public void actionPerformed(ActionEvent e) {
 			
 			double firstNumber, secondNumber = 0;
-			Operator oper = Operator.NULL;
+			//Operator oper = Operator.NULL;
 			
 			try {
 				firstNumber = view.getNumber();
