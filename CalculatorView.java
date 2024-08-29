@@ -51,14 +51,18 @@ public class CalculatorView {
 				one, two, three, plus,
 				zero, decimal, equals};
 		
-		numberButtons = new JButton[] {
+		/*
+		 * numberButtons = new JButton[] {
 				one, two, three, four,
 				five, six, seven, eight,
 				nine};
+		*/
 		
-		operatorButtons = new JButton[] {
+		/*
+		 * operatorButtons = new JButton[] {
 				plusMinus, percent, multiply, 
 				divide, minus, plus};
+		*/
 		
 		addComponents();
 		createAndShow();
