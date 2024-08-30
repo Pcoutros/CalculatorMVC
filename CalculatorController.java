@@ -131,6 +131,8 @@ public class CalculatorController {
 						button.setEnabled(false);
 					}
 					
+					view.getEqualsButton().setEnabled(false);
+					
 					
 				}
 				break;
