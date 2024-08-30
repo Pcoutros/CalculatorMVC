@@ -63,6 +63,7 @@ public class CalculatorView {
 		
 		percent.setEnabled(false);
 		plusMinus.setEnabled(false);
+		decimal.setEnabled(false);
 		//clear.setEnabled(false);
 		equals.setEnabled(false);
 		
