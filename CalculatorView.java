@@ -41,7 +41,7 @@ public class CalculatorView {
 		equals = new JButton("=");
 		clear = new JButton("C");
 		decimal = new JButton(".");
-		plusMinus = new JButton(")");
+		plusMinus = new JButton("+/-");
 		percent = new JButton("%");
 		
 		buttons = new JButton[] {
@@ -51,18 +51,25 @@ public class CalculatorView {
 				one, two, three, plus,
 				zero, decimal, equals};
 		
-		/*
-		 * numberButtons = new JButton[] {
+		
+		numberButtons = new JButton[] {
 				one, two, three, four,
 				five, six, seven, eight,
-				nine};
-		*/
-		
-		/*
-		 * operatorButtons = new JButton[] {
-				plusMinus, percent, multiply, 
+				nine, zero};
+
+		operatorButtons = new JButton[] {
+				//plusMinus, percent, 
+				multiply, 
 				divide, minus, plus};
-		*/
+		
+		percent.setEnabled(false);
+		plusMinus.setEnabled(false);
+		//clear.setEnabled(false);
+		equals.setEnabled(false);
+		
+		for (JButton button : operatorButtons) {
+			button.setEnabled(false);
+		}
 		
 		addComponents();
 		createAndShow();
@@ -74,9 +81,7 @@ public class CalculatorView {
 		frame.setContentPane(contentPanel);
 		GridBagConstraints gbc = new GridBagConstraints();
     	gbc.fill = GridBagConstraints.HORIZONTAL;
-		
-		
-        //gbc.fill = GridBagConstraints.HORIZONTAL;
+			
         gbc.gridx = 0;
         gbc.gridy = 0;
         gbc.gridwidth = 4;
@@ -106,7 +111,6 @@ public class CalculatorView {
             	x = 0;
                 y++;
             }
-            System.out.println(y);
         }
 	}
 	
@@ -114,6 +118,22 @@ public class CalculatorView {
 		for (JButton button : buttons) {
 			button.addActionListener(actionListener);
 		}
+	}
+	
+	public JButton[] getNumberButtons() {
+		return numberButtons;
+	}
+	
+	public JButton[] getOperatorButtons() {
+		return operatorButtons;
+	}
+	
+	public JButton getClearButton() {
+		return clear;
+	}
+	
+	public JButton getEqualsButton() {
+		return equals;
 	}
 	
 	private void createAndShow() {
@@ -128,16 +148,12 @@ public class CalculatorView {
 	public void clearText() {
 		display.setText(null);
 	}
-
-	public static void main(String[] args) {
-		
-        javax.swing.SwingUtilities.invokeLater(new Runnable() {
-            public void run() {
-		
-		        CalculatorView cv = new CalculatorView();
-            }
-        });
+	
+	public void setText(String input) {
+		display.setText(input);
 	}
+
+
 
 	
 }
