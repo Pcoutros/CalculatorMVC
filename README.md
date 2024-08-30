@@ -17,3 +17,11 @@ Project is functional for Features 1-4. Still need to add Features 5 and 6 and c
 5) Positive/Negative
 6) Percent
 
+## How to Use
+
+1) Clone the repository
+2) Open terminal and change directories to the desired destination
+3) Type: `git clone <repository_url>`
+4) Change directory into the repository name
+5) Compile the Main.java file using: `javac Main.java`
+6) Run the program using: `java Main`
