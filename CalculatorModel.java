@@ -1,4 +1,3 @@
-
 public class CalculatorModel {
 	
 	private double result;
