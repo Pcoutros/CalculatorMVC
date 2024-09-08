@@ -1,3 +1,10 @@
+/**
+* This file acts as the Model for the calculator and handles the back-end calculations. It is intended to be used by the CalculatorController, which
+* gets the user's input from the GUI created by CalculatorView.
+*
+* Author: Pete Coutros
+* Date: August 2024
+*/
 
 public class CalculatorModel {
 	
@@ -18,6 +25,7 @@ public class CalculatorModel {
 		switch (oper) {
 		case DIVIDE:
 			if (input2 == 0) {
+				//Tech Debt: need better error handling
 				System.out.println("undefined");
 			} else {
 				result = input1 / input2;
