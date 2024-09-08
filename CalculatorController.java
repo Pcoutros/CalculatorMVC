@@ -1,3 +1,12 @@
+/**
+* This file acts as the controller between the View and the Model of the calculator. It allows the front end GUI and the back end calculation
+* logic to communicate with each other to provide the correct calculations from the user's input. It also deals with input validation by blocking
+* buttons during parts of the input process.
+*
+* Author: Pete Coutros
+* Date: August 2024
+*/
+
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JButton;
