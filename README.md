@@ -2,7 +2,7 @@
 
 ## Description
 
-This is a work in progress to build a calculator off an MVC model using Java Swing. It is aimed to mimic the layout of mobile calculator apps.
+This is a work in progress to build a calculator off an MVC model using Java Swing. It is aimed to mimic the layout of mobile calculator apps. Error handling is achieved by blocking buttons rather than displaying errors in a JOptionPane. 
 
 ## Status
 
