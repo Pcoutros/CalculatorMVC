@@ -1,3 +1,11 @@
+/**
+* This file acts as the View for the calculator. It creates the front end GUI that the user will interact with to perform their desired 
+* calculations. It is built using a gridbag layout and is meant to mimic mobile calculator app layouts.
+*
+* Author: Pete Coutros
+* Date: August 2024
+*/
+
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
 import java.awt.event.ActionListener;
